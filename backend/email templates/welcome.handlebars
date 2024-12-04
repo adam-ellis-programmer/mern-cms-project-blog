@@ -1,0 +1,140 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Welcome Email</title>
+    {{!-- prettier-ignore --}}
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+      td {
+        padding: 0;
+      }
+
+      /* Main Container */
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Section */
+      .email-header {
+        background-color: #4caf50;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      .email-header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      /* Body Section */
+      .email-body {
+        padding: 30px;
+        color: #333333;
+      }
+      .email-body h2 {
+        margin-top: 0;
+        color: #4caf50;
+      }
+      .email-body p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* Button */
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      /* Footer Section */
+      .email-footer {
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+      }
+      .email-footer a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      /* Responsive Design */
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+        .email-body,
+        .email-footer {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Email Container -->
+    <table role='presentation' class='email-container'>
+      <!-- Header -->
+      <tr>
+        <td class='email-header'>
+          <h1>Welcome to Blogging Site!</h1>
+        </td>
+      </tr>
+
+      <!-- Body -->
+      <tr>
+        <td class='email-body'>
+          <h2>Hi {{username}},</h2>
+          <p>
+            We are thrilled to have you onboard. You've just joined a community of
+            passionate writers, creators, and readers who are excited to share their
+            stories with the world.
+          </p>
+          <p>
+            To get started, click the button below and begin exploring the platform. We
+            can't wait to see what you'll write!
+          </p>
+
+          <!-- Call-to-Action Button -->
+          <a href='https://example.com/dashboard' class='cta-button'> Go to Dashboard </a>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td class='email-footer'>
+          <p>
+            Need help?
+            <a href='mailto:support@example.com'>Contact us</a>
+            or visit our
+            <a href='https://example.com/help'>Help Center</a>.
+          </p>
+          <p>© 2024 Blogging Site. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

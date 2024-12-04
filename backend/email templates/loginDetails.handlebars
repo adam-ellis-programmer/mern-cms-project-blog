@@ -1,0 +1,176 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Your Login Details</title>
+    {{!-- prettier-ignore --}}
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333333;
+      }
+
+      /* Main Container */
+      .email-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 0;
+      }
+
+      /* Header Section */
+      .email-header {
+        background-color: #4caf50;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .email-header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      /* Login Details Section */
+      .login-details {
+        padding: 20px 30px;
+        color: #333333;
+      }
+      .login-details h2 {
+        color: #4caf50;
+        margin-top: 0;
+        font-size: 22px;
+      }
+      .login-details p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      /* Credentials Table */
+      .credentials-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background-color: #fafafa;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+      }
+      .credentials-table th,
+      .credentials-table td {
+        padding: 12px 15px;
+        font-size: 16px;
+        text-align: left;
+        border-bottom: 1px solid #dddddd;
+      }
+      .credentials-table th {
+        background-color: #4caf50;
+        color: white;
+        font-weight: normal;
+        font-size: 16px;
+      }
+      .credentials-table td {
+        background-color: #ffffff;
+      }
+
+      /* Call-to-Action Button */
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .cta-button:hover {
+        background-color: #45a049;
+      }
+
+      /* Footer Section */
+      .email-footer {
+        background-color: #f4f4f4;
+        padding: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+      }
+      .email-footer a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      /* Responsive Design */
+      @media only screen and (max-width: 600px) {
+        .email-container {
+        /*why !important*/
+          width: 100% !important;
+          padding: 0;
+        }
+        .login-details,
+        .email-footer {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Email Container -->
+    <div class='email-container'>
+      <!-- Header -->
+      <div class='email-header'>
+        <h1>Your Login Details</h1>
+      </div>
+
+      <!-- Login Details -->
+      <div class='login-details'>
+        <h2>Hi {{username}},</h2>
+        <p>Welcome to our platform! Below are your login details. Please keep them safe.</p>
+
+        <!-- Credentials Table -->
+        <table class='credentials-table'>
+          <tbody>
+            <tr>
+              <th>Username:</th>
+              <td>{{loginDetails.email}}</td>
+            </tr>
+            <tr>
+              <th>Password:</th>
+              <td>{{loginDetails.password}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>For security reasons, we recommend changing your password after your first
+          login. You can log in by clicking the button below:</p>
+
+        <!-- Call-to-Action Button -->
+        <a href='https://example.com/login' class='cta-button'>Log In Now</a>
+      </div>
+
+      <!-- Footer -->
+      <div class='email-footer'>
+        <p>
+          Need help?
+          <a href='mailto:support@example.com'>Contact us</a>
+          or visit our
+          <a href='https://example.com/help'>Help Center</a>.
+        </p>
+        <p>© 2024 Your Company. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>

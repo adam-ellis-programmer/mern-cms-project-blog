@@ -1,0 +1,196 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Your Invoice</title>
+    {{!-- prettier-ignore  --}}
+    <style>
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+      td {
+        padding: 0;
+      }
+
+      /* Main Container */
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Section */
+      .email-header {
+        background-color: #4caf50;
+        padding: 20px;
+        text-align: center;
+        color: white;
+      }
+      .email-header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      /* Invoice Details */
+      .invoice-details {
+        padding: 30px;
+        color: #333333;
+      }
+      .invoice-details h2 {
+        margin-top: 0;
+        color: #4caf50;
+      }
+      .invoice-details p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* Invoice Table */
+      .invoice-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      .invoice-table th,
+      .invoice-table td {
+        padding: 12px;
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        font-size: 16px;
+      }
+      .invoice-table th {
+        background-color: #f4f4f4;
+      }
+
+      /* Total Row */
+      .total-row {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
+      }
+
+      /* Payment Button */
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      /* Footer Section */
+      .email-footer {
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #666666;
+      }
+      .email-footer a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      /* Responsive Design */
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          width: 100% !important;
+        }
+        .invoice-details,
+        .email-footer {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Email Container -->
+    <table role='presentation' class='email-container'>
+      <!-- Header -->
+      <tr>
+        <td class='email-header'>
+          <h1>Your Invoice</h1>
+        </td>
+      </tr>
+
+      <!-- Invoice Details -->
+      <tr>
+        <td class='invoice-details'>
+          <h2>Invoice #{{invoiceNumber}}</h2>
+          <p>Hi {{username}},</p>
+          <p>Thank you for your recent purchase! Here are the details of your invoice:</p>
+
+          <!-- Invoice Table -->
+          <table class='invoice-table'>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Loop through each purchase -->
+              {{#each purchases}}
+                <tr>
+                  <td>{{product}}</td>
+                  <td>{{quantity}}</td>
+                  <td>${{price}}</td>
+                  <td>${{total}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+            <tfoot>
+              <tr class='total-row'>
+                <td colspan='3'>Subtotal</td>
+                <td>${{subtotal}}</td>
+              </tr>
+              <tr class='total-row'>
+                <td colspan='3'>Tax</td>
+                <td>${{tax}}</td>
+              </tr>
+              <tr class='total-row'>
+                <td colspan='3'>Total</td>
+                <td>${{total}}</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- Call-to-Action Button -->
+          <a href='https://example.com/payment' class='cta-button'>
+            Complete Your Payment
+          </a>
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td class='email-footer'>
+          <p>
+            Need help?
+            <a href='mailto:support@example.com'>Contact us</a>
+            or visit our
+            <a href='https://example.com/help'>Help Center</a>.
+          </p>
+          <p>© 2024 Your Company. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
