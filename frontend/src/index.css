@@ -786,9 +786,6 @@ ul {
 }
 .register-form-section {
   display: grid;
-  /* border: 1px solid; */
-  /* margin-top: 7rem; */
-  /* padding: 1rem; */
 }
 
 @media screen and (max-width: 609px) {
@@ -1006,9 +1003,6 @@ ul {
   /* margin: 1rem 0; */
 }
 
-/* this is a hiigher specificity */
-/* .admin-blog-form-container-right-div > p, */
-/* intead of   border-color: #000; */
 .admin-blog-form-container-right-div > * {
   /* border: 1px solid; */
   /* margin-bottom: .5rem; */
@@ -1066,6 +1060,7 @@ ul {
   margin-top: 2rem;
 }
 
+/* dense option */
 @media screen and (max-width: 1254px) {
   .admin-blog-form-container {
     grid-template-columns: 1fr;
@@ -1457,15 +1452,6 @@ ul {
   margin: auto;
   margin-bottom: 1.5rem;
 }
-
-/* .scroll-up-cotainer {
-  position: absolute;
-  border: 1px solid;
-  width: 100%;
-  bottom: 3rem;
-  display: flex;
-  justify-content: end;
-} */
 
 .scroll-up-btn {
   position: fixed;
@@ -3233,7 +3219,7 @@ select {
 
 .admin-email-btn {
   /* Existing styles */
-  background-color: #007bff; /* Original blue color */
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -3254,10 +3240,9 @@ select {
 
 /* Styles when the button is disabled */
 .admin-email-btn.disabled,
-/* Targets elements with the class admin-email-btn that are also disabled via the HTML disabled attribute. */
 .admin-email-btn:disabled {
-  background-color: #cccccc; /* Gray background */
-  color: #666666; /* Gray text */
+  background-color: #cccccc;
+  color: #666666;
   cursor: not-allowed; /* Disabled cursor */
 }
 
@@ -3325,9 +3310,7 @@ select {
   border-radius: 0.7rem;
   cursor: pointer;
 }
-.admin-email-modal > div {
-  /* border: 1px solid; */
-}
+
 .send-icon {
   font-size: 1.3rem;
   margin-left: 1rem;
@@ -3344,8 +3327,6 @@ select {
   min-height: 300px;
 }
 
-/* resize: none: Disables resizing of the textarea by the user. If you only want to restrict one direction, you can also set it to resize: vertical or resize: horizontal. */
-/* disable resizing width */
 .admin-email-text {
   max-width: 100%;
   min-width: 100%;
@@ -3377,10 +3358,10 @@ select {
 
 /* was 100% from the top */
 .success-div {
-  position: absolute; /* Make success-div absolutely positioned relative to email-p */
-  top: -3px; /* Position it below the email text with some margin */
-  right: -90px; /* Align it to the left edge of the email-p */
-  font-size: smaller; /* Adjust size as needed */
+  position: absolute;
+  top: -3px;
+  right: -90px;
+  font-size: smaller;
   background-color: #023e73;
   padding: 5px 10px;
   border-radius: 30px;
@@ -3554,10 +3535,6 @@ select {
 .footer-left > ul {
   width: 100%;
   padding: 1rem;
-  /* color: #fff; */
-  /* border: 1px solid; */
-  /* width: fit-content; */
-  /* width: 50%;  */
 }
 
 .footer-left > ul li {
@@ -4035,7 +4012,7 @@ input[type='radio'] {
     margin-top: 1rem; */
   }
 }
-/* ========================>> THIS IS THE FIRST BREAK */
+
 /* 971 mobile break point */
 @media screen and (max-width: 971px) {
   .nav-logo {
@@ -4056,7 +4033,7 @@ input[type='radio'] {
     font-size: 24px;
     height: 46px;
     width: 66px;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
   }
 
   .home-hero {
@@ -4282,19 +4259,9 @@ input[type='radio'] {
 .question-p {
   position: relative;
 }
-/* .question-p::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  height: 8px;
-  left: -15px;
-  width: 8px;
-  background-color: rgb(190, 61, 29);
-} */
 
 @media screen and (max-width: 698px) {
   .accordion-section {
-    /* border: 1px solid; */
     padding: 0 1.3rem;
   }
 }
@@ -4457,10 +4424,7 @@ input[type='radio'] {
 /* ================ ASK ===================== */
 
 /* ================ MESSAGE FORM COMPONENT ===================== */
-.message-form-group {
-  /* border: 1px solid; */
-  /* margin-bottom: 5px; */
-}
+
 .message-name-container {
   display: flex;
   justify-content: space-between;
@@ -4844,8 +4808,6 @@ input[type='radio'] {
   min-height: calc(100vh - 100px);
   font-family: 'Red Hat Display', sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>; */
-  /* font-style: normal; */
 }
 .my-account-grid {
   display: grid;
@@ -4970,13 +4932,6 @@ input[type='radio'] {
   outline: none;
   border: 0.1px solid rgb(176, 23, 166);
   border-radius: 5px;
-}
-
-.change-pw-div {
-  /* border: 1px solid; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* text-align: end; */
 }
 
 .change-password-btn {
@@ -5151,24 +5106,6 @@ input[type='radio'] {
   font-size: 1.1rem;
 }
 /* ================ TERMS AND CONDITIONS ===================== */
-/* ================ FORGOT PASSOWRD ===================== */
-/* .forgot-pw-div {
-  border: 1px solid;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.forgot-pw-btn {
-  font-family: 'Red Hat Display', sans-serif;
-  border: none;
-  padding: 0.3rem 1rem;
-  font-size: 0.8rem;
-  background-color: #595959;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-} */
-/* ================ FORGOT PASSOWRD ===================== */
 
 /* ================ IMAGE MANAGMENT ===================== */
 
